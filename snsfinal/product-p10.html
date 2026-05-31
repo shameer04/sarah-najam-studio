@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title></title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=DM+Sans:wght@300;400;500&family=Poppins:wght@600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<div class="loader" id="loader"><div class="loader__logo">Sarah Najam Studio</div><div class="loader__bar"><span></span></div></div>
+<div class="mobile-overlay" id="mobileOverlay"></div>
+<nav class="mobile-menu" id="mobileMenu">
+  <button class="mobile-menu__close" id="mobileClose">&#10005;</button>
+  <ul class="mobile-menu__links">
+    <li>
+      <button class="mobile-shop-row" id="mobileShopRow">Shop <span class="mobile-shop-arrow">&#9662;</span></button>
+      <div class="mobile-sub" id="mobileShopSub">
+        <a href="shop-abayas.html">Abayas</a>
+        <a href="shop-gowns.html">Gowns</a>
+        <a href="shop-dresses.html">Dresses</a>
+        <a href="shop.html">All Products</a>
+      </div>
+    </li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+<header class="navbar" id="navbar">
+  <ul class="navbar__links">
+    <li><a href="index.html" class="nav-link">Home</a></li>
+    <li class="shop-parent">
+      <a href="shop.html" class="nav-link">Shop</a>
+      <button class="shop-arrow" aria-label="Toggle shop dropdown">&#9662;</button>
+      <div class="shop-dropdown">
+        <a href="shop-abayas.html">Abayas</a>
+        <a href="shop-gowns.html">Gowns</a>
+        <a href="shop-dresses.html">Dresses</a>
+      </div>
+    </li>
+    <li><a href="about.html" class="nav-link">About</a></li>
+    <li><a href="contact.html" class="nav-link">Contact</a></li>
+  </ul>
+  <a href="index.html" class="navbar__logo">Sarah Najam Studio</a>
+  <div class="navbar__right">
+    <button class="cart-btn nav-link" id="cartBtn" aria-label="Open bag">
+      <svg class="cart-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+      <span class="cart-count">0</span>
+    </button>
+    <button class="hamburger" id="hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+<aside class="cart-sidebar" id="cartSidebar">
+  <div class="cart-header"><h2>Your Bag</h2><button class="cart-close" id="cartClose">&#10005;</button></div>
+  <div class="cart-items" id="cartItems"><p class="cart-empty">Your bag is empty.</p></div>
+  <div class="cart-footer">
+    <div class="cart-total"><span>Total</span><span id="cartTotal">PKR 0</span></div>
+    <a href="cart.html" class="btn-primary" style="width:100%;justify-content:center;">View Cart</a>
+  </div>
+</aside>
+<div class="cart-overlay" id="cartOverlay"></div>
+<main>
+<section class="pdp-section">
+  <div class="pdp__inner">
+    <div class="pdp__gallery">
+      <div class="pdp__main-img" id="pdpMainImg">
+        <div class="pdp__img-ph" id="pdpImgPh"></div>
+      </div>
+      <div class="pdp__thumbnails" id="pdpThumbnails"></div>
+    </div>
+    <div class="pdp__details">
+      <p class="pdp__breadcrumb"><a href="index.html">Home</a> / <a href="shop.html">Shop</a> / Modal Relaxed Set – Dune</p>
+      <h1 class="pdp__title"></h1>
+      <div class="pdp__stock pdp__stock--in">&#10003;&nbsp;In Stock</div>
+      <p class="pdp__price">PKR 8,400</p>
+      <p class="pdp__desc">A two-piece co-ord in our signature modal blend. Breathable, wrinkle-resistant, and effortlessly put-together.</p>
+      <ul class="pdp__features"><li>Fabric: Gowns Blend</li><li>Sizes: XS, S, M, L, XL</li><li>Care: Machine wash gentle cold</li><li>Colour: Dune (warm sand)</li></ul>
+      <button class="btn-primary pdp__add-btn" id="pdpAddBtn" data-id="p10" data-name="Modal Relaxed Set – Dune" data-price="8400" data-instock="true">Add to Bag</button>
+
+      <div class="pdp__meta"><p>SKU: NTL-M-001</p><p>Category: Gowns</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Reviews Section ──────────────────────────────────── -->
+<section class="pdp-reviews" id="pdpReviews" style="background:var(--warm-white);padding-top:0;">
+  <div class="pdp-reviews__header">
+    <div>
+      <h2 class="pdp-reviews__title">Customer Reviews</h2>
+      <div class="pdp-reviews__summary" id="reviewsSummary">
+        <span class="pdp-reviews__avg" id="reviewsAvg">0.0</span>
+        <div class="pdp-reviews__stars-display" id="reviewsStars"></div>
+        <span class="pdp-reviews__count" id="reviewsCount">0 reviews</span>
+      </div>
+    </div>
+    <button class="pdp-reviews__write-btn" id="writeReviewBtn">✎ Write a Review</button>
+  </div>
+
+  <!-- Review Form -->
+  <div class="pdp-review-form" id="reviewForm">
+    <div class="pdp-review-form__inner">
+      <h3 class="pdp-review-form__title">Share your experience</h3>
+      <div class="pdp-review-form__success" id="reviewSuccess">Thank you! Your review has been submitted.</div>
+      <div class="pdp-review-form__row">
+        <div class="form-field">
+          <label for="reviewName">Your Name</label>
+          <input type="text" id="reviewName" placeholder="e.g. Ayesha K." required />
+        </div>
+        <div class="form-field">
+          <label>Rating</label>
+          <div class="star-picker" id="starPicker">
+            <button type="button" class="star-picker__star" data-value="1">★</button>
+            <button type="button" class="star-picker__star" data-value="2">★</button>
+            <button type="button" class="star-picker__star" data-value="3">★</button>
+            <button type="button" class="star-picker__star" data-value="4">★</button>
+            <button type="button" class="star-picker__star" data-value="5">★</button>
+          </div>
+        </div>
+      </div>
+      <div class="form-field">
+        <label for="reviewText">Your Review</label>
+        <textarea id="reviewText" rows="4" placeholder="Tell others about your experience with this product..."></textarea>
+      </div>
+      <label class="star-picker__label">Add Photos (optional, up to 3)</label>
+      <div class="review-photo-upload" id="photoUploadArea">
+        <span class="review-photo-upload__icon">📷</span>
+        <p class="review-photo-upload__text"><span>Click to upload</span> or drag and drop<br>JPG, PNG up to 5MB each</p>
+        <input type="file" id="reviewPhotoInput" accept="image/jpeg,image/png,image/webp" multiple />
+      </div>
+      <div class="review-photo-previews" id="photoPreviews"></div>
+      <button class="btn-primary pdp-review-form__submit" id="submitReviewBtn" type="button">Submit Review</button>
+    </div>
+  </div>
+
+  <!-- Reviews Grid -->
+  <div class="pdp-reviews__grid" id="reviewsGrid">
+    <p class="pdp-reviews__empty">No reviews yet. Be the first to share your experience!</p>
+  </div>
+</section>
+
+<!-- Photo Lightbox -->
+<div class="review-lightbox" id="reviewLightbox">
+  <button class="review-lightbox__close" id="lightboxClose">✕</button>
+  <img src="" alt="Review photo" id="lightboxImg" />
+</div>
+
+</main>
+<footer class="footer">
+  <div class="footer__grid">
+    <div>
+      <p class="footer__brand">Sarah Najam Studio</p>
+      <p class="footer__tagline">Modest fashion for the modern Muslim woman. Based in Karachi.</p>
+      <div class="footer__socials">
+        <a href="https://www.instagram.com/sarahnajam_studio/" target="_blank" rel="noopener">Instagram</a>
+      </div>
+    </div>
+    <div>
+      <p class="footer__col-title">Quick Links</p>
+      <ul class="footer__links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="footer__col-title">Collections</p>
+      <ul class="footer__links">
+        <li><a href="shop-gowns.html">Gowns</a></li>
+        <li><a href="shop-dresses.html">Dresses</a></li>
+        <li><a href="shop-abayas.html">Abayas</a></li>
+        <li><a href="shop.html">New Arrivals</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="footer__col-title">Policies</p>
+      <ul class="footer__links">
+        <li><a href="policy-refund.html">Refund Policy</a></li>
+        <li><a href="policy-exchange.html">Exchange Policy</a></li>
+        <li><a href="policy-shipping.html">Shipping &amp; Delivery</a></li>
+      </ul>
+    </div>
+  </div>
+  
+  <div class="footer__bottom">
+    <small>&copy; <span class="footer-year">2026</span> Sarah Najam Studio. All rights reserved.</small>
+    <small>Karachi, Pakistan</small>
+  </div>
+</footer>
+<button class="back-to-top" id="backToTop" aria-label="Back to top">&#8593;</button>
+<script>
+(function() {
+  const SUPABASE_URL = 'https://ixmdcwcswmwcwjrtyuoy.supabase.co'
+  const SUPABASE_KEY = 'sb_publishable_J4xkUnkTBUinqXdXIH2IGg_8mhAM5O3'
+
+  let currentSlug = null;
+  let selectedRating = 0;
+  let uploadedFiles = [];
+
+  async function loadProduct() {
+    const slug = new URLSearchParams(window.location.search).get('slug')
+    if (!slug) return
+    currentSlug = slug;
+
+    const res = await fetch(
+      `${SUPABASE_URL}/rest/v1/products?slug=eq.${slug}&select=*`,
+      { headers: { apikey: SUPABASE_KEY, Authorization: `Bearer ${SUPABASE_KEY}` } }
+    )
+    const data = await res.json()
+    const p = data[0]
+    if (!p) return
+
+    // Fill in product details
+    document.querySelector('.pdp__title').textContent = p.name
+    document.querySelector('.pdp__price').textContent = `PKR ${p.price.toLocaleString()}`
+    document.querySelector('.pdp__desc').textContent = p.description
+    document.querySelector('title').textContent = `${p.name} — Sarah najam Studio`
+    document.querySelector('.pdp__breadcrumb').innerHTML =
+      `<a href="index.html">Home</a> / <a href="shop.html">Shop</a> / ${p.name}`
+
+    // Stock status
+    const stockEl = document.querySelector('.pdp__stock')
+    if (p.inventory > 0) {
+      stockEl.textContent = '✓ In Stock'
+      stockEl.className = 'pdp__stock pdp__stock--in'
+    } else {
+      stockEl.textContent = '✗ Out of Stock'
+      stockEl.className = 'pdp__stock pdp__stock--out'
+    }
+
+    // Features list
+    const featuresList = document.querySelector('.pdp__features')
+    
+    featuresList.innerHTML = p.features
+      .split('\n')
+      .filter(f => f.trim())
+      .map(f => `<li>${f.trim().replace(/^\*\s*/, '')}</li>`)
+      .join('')
+
+    // Gallery images
+    const images = [p.image_url, p.image_url_2, p.image_url_3].filter(u => u && u.trim())
+    const mainImg = document.getElementById('pdpMainImg')
+    const thumbsEl = document.getElementById('pdpThumbnails')
+    const ph = document.getElementById('pdpImgPh')
+
+    if (images.length > 0) {
+      // Set main image
+      ph.innerHTML = `<img src="${images[0]}" alt="${p.name}" style="width:100%;height:100%;object-fit:cover;object-position:center top;" />`
+
+      // Build thumbnails if more than 1 image
+      if (images.length > 1) {
+        thumbsEl.innerHTML = images.map((url, i) => `
+          <div class="pdp__thumb ${i === 0 ? 'active' : ''}" data-index="${i}">
+            <img src="${url}" alt="${p.name} view ${i + 1}" />
+          </div>
+        `).join('')
+
+        // Thumbnail click
+        thumbsEl.querySelectorAll('.pdp__thumb').forEach(thumb => {
+          thumb.addEventListener('click', () => {
+            const idx = parseInt(thumb.dataset.index)
+            ph.innerHTML = `<img src="${images[idx]}" alt="${p.name}" style="width:100%;height:100%;object-fit:cover;object-position:center top;" />`
+            thumbsEl.querySelectorAll('.pdp__thumb').forEach(t => t.classList.remove('active'))
+            thumb.classList.add('active')
+          })
+        })
+      }
+    }
+
+    // Add to bag button
+    const btn = document.querySelector('.pdp__add-btn')
+    btn.dataset.id = p.id
+    btn.dataset.name = p.name
+    btn.dataset.price = p.price
+    btn.dataset.instock = p.inventory > 0
+    btn.dataset.image = p.image_url || ''
+    if (p.inventory <= 0) btn.disabled = true
+
+    // SKU and category
+    document.querySelector('.pdp__meta').innerHTML =
+      `<p>SKU: ${p.sku}</p><p>Category: ${p.category}</p>`
+
+    // Load reviews for this product
+    loadReviews(slug)
+  }
+
+  // ── Reviews ────────────────────────────────────────────
+
+  function renderStars(rating, filledClass = 'star', emptyClass = 'star-empty') {
+    let html = ''
+    for (let i = 1; i <= 5; i++) {
+      html += `<span class="${i <= rating ? filledClass : emptyClass}">★</span>`
+    }
+    return html
+  }
+
+  async function loadReviews(slug) {
+    try {
+      const res = await fetch(
+        `${SUPABASE_URL}/rest/v1/reviews?product_slug=eq.${slug}&select=*&order=created_at.desc`,
+        { headers: { apikey: SUPABASE_KEY, Authorization: `Bearer ${SUPABASE_KEY}` } }
+      )
+      const reviews = await res.json()
+      if (!Array.isArray(reviews)) return
+
+      // Summary
+      const count = reviews.length
+      const avg = count > 0 ? (reviews.reduce((s, r) => s + r.rating, 0) / count).toFixed(1) : '0.0'
+
+      document.getElementById('reviewsAvg').textContent = avg
+      document.getElementById('reviewsStars').innerHTML = renderStars(Math.round(parseFloat(avg)), 'star-filled', 'star-empty')
+      document.getElementById('reviewsCount').textContent = `${count} review${count !== 1 ? 's' : ''}`
+
+      // Grid
+      const grid = document.getElementById('reviewsGrid')
+      if (count === 0) {
+        grid.innerHTML = '<p class="pdp-reviews__empty">No reviews yet. Be the first to share your experience!</p>'
+        return
+      }
+
+      grid.innerHTML = reviews.map(r => {
+        const photos = [r.photo_url_1, r.photo_url_2, r.photo_url_3].filter(u => u && u.trim())
+        const date = new Date(r.created_at).toLocaleDateString('en-PK', { year: 'numeric', month: 'short', day: 'numeric' })
+        return `
+          <div class="pdp-review-card">
+            <div class="pdp-review-card__top">
+              <div class="pdp-review-card__stars">${renderStars(r.rating)}</div>
+              <span class="pdp-review-card__date">${date}</span>
+            </div>
+            <p class="pdp-review-card__text">${r.review_text || ''}</p>
+            <p class="pdp-review-card__author">${r.reviewer_name}</p>
+            ${photos.length > 0 ? `
+              <div class="pdp-review-card__photos">
+                ${photos.map(url => `
+                  <div class="pdp-review-card__photo" onclick="openLightbox('${url}')">
+                    <img src="${url}" alt="Review photo" />
+                  </div>
+                `).join('')}
+              </div>
+            ` : ''}
+          </div>
+        `
+      }).join('')
+
+    } catch (err) {
+      console.error('Error loading reviews:', err)
+    }
+  }
+
+  // Lightbox
+  window.openLightbox = function(url) {
+    const lb = document.getElementById('reviewLightbox')
+    document.getElementById('lightboxImg').src = url
+    lb.classList.add('active')
+  }
+  document.getElementById('lightboxClose').addEventListener('click', () => {
+    document.getElementById('reviewLightbox').classList.remove('active')
+  })
+  document.getElementById('reviewLightbox').addEventListener('click', (e) => {
+    if (e.target === e.currentTarget) {
+      e.currentTarget.classList.remove('active')
+    }
+  })
+
+  // Toggle review form
+  document.getElementById('writeReviewBtn').addEventListener('click', () => {
+    document.getElementById('reviewForm').classList.toggle('open')
+  })
+
+  // Star picker
+  const starPicker = document.getElementById('starPicker')
+  const stars = starPicker.querySelectorAll('.star-picker__star')
+  stars.forEach(star => {
+    star.addEventListener('mouseenter', () => {
+      const val = parseInt(star.dataset.value)
+      stars.forEach(s => {
+        const sv = parseInt(s.dataset.value)
+        s.classList.toggle('hover', sv <= val && sv > selectedRating)
+      })
+    })
+    star.addEventListener('click', () => {
+      selectedRating = parseInt(star.dataset.value)
+      stars.forEach(s => {
+        s.classList.remove('hover')
+        s.classList.toggle('active', parseInt(s.dataset.value) <= selectedRating)
+      })
+    })
+  })
+  starPicker.addEventListener('mouseleave', () => {
+    stars.forEach(s => s.classList.remove('hover'))
+  })
+
+  // Photo upload
+  const photoInput = document.getElementById('reviewPhotoInput')
+  const uploadArea = document.getElementById('photoUploadArea')
+  const previews = document.getElementById('photoPreviews')
+
+  uploadArea.addEventListener('dragover', e => { e.preventDefault(); uploadArea.classList.add('dragover') })
+  uploadArea.addEventListener('dragleave', () => uploadArea.classList.remove('dragover'))
+  uploadArea.addEventListener('drop', e => {
+    e.preventDefault()
+    uploadArea.classList.remove('dragover')
+    handleFiles(e.dataTransfer.files)
+  })
+  photoInput.addEventListener('change', () => handleFiles(photoInput.files))
+
+  function handleFiles(files) {
+    const remaining = 3 - uploadedFiles.length
+    const toAdd = Array.from(files).slice(0, remaining)
+    toAdd.forEach(file => {
+      if (file.size > 5 * 1024 * 1024) return
+      if (!file.type.startsWith('image/')) return
+      uploadedFiles.push(file)
+    })
+    renderPreviews()
+  }
+
+  function renderPreviews() {
+    previews.innerHTML = uploadedFiles.map((file, i) => {
+      const url = URL.createObjectURL(file)
+      return `
+        <div class="review-photo-preview">
+          <img src="${url}" alt="Upload preview" />
+          <button class="review-photo-preview__remove" data-index="${i}" type="button">✕</button>
+        </div>
+      `
+    }).join('')
+    if (uploadedFiles.length >= 3) uploadArea.style.display = 'none'
+    else uploadArea.style.display = ''
+    previews.querySelectorAll('.review-photo-preview__remove').forEach(btn => {
+      btn.addEventListener('click', () => {
+        uploadedFiles.splice(parseInt(btn.dataset.index), 1)
+        renderPreviews()
+      })
+    })
+  }
+
+  // Submit review
+  document.getElementById('submitReviewBtn').addEventListener('click', async () => {
+    const name = document.getElementById('reviewName').value.trim()
+    const text = document.getElementById('reviewText').value.trim()
+
+    if (!name) { document.getElementById('reviewName').style.borderColor = '#c0392b'; setTimeout(() => document.getElementById('reviewName').style.borderColor = '', 2000); return }
+    if (!selectedRating) { starPicker.style.outline = '1px solid #c0392b'; setTimeout(() => starPicker.style.outline = '', 2000); return }
+
+    const btn = document.getElementById('submitReviewBtn')
+    btn.textContent = 'Submitting...'
+    btn.disabled = true
+
+    try {
+      // Upload photos to Supabase Storage
+      const photoUrls = []
+      for (const file of uploadedFiles) {
+        const ext = file.name.split('.').pop()
+        const fileName = `${Date.now()}_${Math.random().toString(36).slice(2)}.${ext}`
+        const uploadRes = await fetch(
+          `${SUPABASE_URL}/storage/v1/object/review_photos/${fileName}`,
+          {
+            method: 'POST',
+            headers: {
+              apikey: SUPABASE_KEY,
+              Authorization: `Bearer ${SUPABASE_KEY}`,
+              'Content-Type': file.type
+            },
+            body: file
+          }
+        )
+        if (uploadRes.ok) {
+          photoUrls.push(`${SUPABASE_URL}/storage/v1/object/public/review_photos/${fileName}`)
+        }
+      }
+
+      // Insert review
+      await fetch(`${SUPABASE_URL}/rest/v1/reviews`, {
+        method: 'POST',
+        headers: {
+          apikey: SUPABASE_KEY,
+          Authorization: `Bearer ${SUPABASE_KEY}`,
+          'Content-Type': 'application/json',
+          Prefer: 'return=minimal'
+        },
+        body: JSON.stringify({
+          product_slug: currentSlug,
+          reviewer_name: name,
+          rating: selectedRating,
+          review_text: text,
+          photo_url_1: photoUrls[0] || null,
+          photo_url_2: photoUrls[1] || null,
+          photo_url_3: photoUrls[2] || null,
+          created_at: new Date().toISOString()
+        })
+      })
+
+      // Success
+      document.getElementById('reviewSuccess').classList.add('visible')
+      document.getElementById('reviewName').value = ''
+      document.getElementById('reviewText').value = ''
+      selectedRating = 0
+      uploadedFiles = []
+      stars.forEach(s => s.classList.remove('active'))
+      renderPreviews()
+      btn.textContent = 'Submit Review'
+      btn.disabled = false
+
+      // Reload reviews
+      setTimeout(() => {
+        loadReviews(currentSlug)
+        document.getElementById('reviewSuccess').classList.remove('visible')
+      }, 2000)
+
+    } catch (err) {
+      console.error('Error submitting review:', err)
+      btn.textContent = 'Submit Review'
+      btn.disabled = false
+      alert('Something went wrong. Please try again!')
+    }
+  })
+
+  loadProduct()
+})();
+</script>
+<script src="script.js"></script>
+
+</body>
+</html>

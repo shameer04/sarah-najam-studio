@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Abayas — Sarah najam Studio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=DM+Sans:wght@300;400;500&family=Poppins:wght@600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<div class="loader" id="loader"><div class="loader__logo">Sarah Najam Studio</div><div class="loader__bar"><span></span></div></div><div class="mobile-overlay" id="mobileOverlay"></div><nav class="mobile-menu" id="mobileMenu">
+  <button class="mobile-menu__close" id="mobileClose">✕</button>
+  <ul class="mobile-menu__links">
+    <li>
+      <button class="mobile-shop-row" id="mobileShopRow">Shop <span class="mobile-shop-arrow">▾</span></button>
+      <div class="mobile-sub" id="mobileShopSub">
+        <a href="shop-abayas.html">Abayas</a>
+        <a href="shop-gowns.html">Gowns</a>
+        <a href="shop-dresses.html">Dresses</a>
+        <a href="shop.html">All Products</a>
+      </div>
+    </li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav><header class="navbar" id="navbar">
+  <ul class="navbar__links">
+    <li><a href="index.html" class="nav-link">Home</a></li>
+    <li class="shop-parent">
+      <a href="shop.html" class="nav-link">Shop</a>
+      <button class="shop-arrow" aria-label="Toggle shop dropdown">▾</button>
+      <div class="shop-dropdown">
+        <a href="shop-abayas.html">Abayas</a>
+        <a href="shop-gowns.html">Gowns</a>
+        <a href="shop-dresses.html">Dresses</a>
+      </div>
+    </li>
+    <li><a href="about.html" class="nav-link">About</a></li>
+    <li><a href="contact.html" class="nav-link">Contact</a></li>
+  </ul>
+  <a href="index.html" class="navbar__logo">Sarah Najam Studio</a>
+  <div class="navbar__right">
+    <button class="cart-btn nav-link" id="cartBtn" aria-label="Open bag">
+      <svg class="cart-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+      <span class="cart-count">0</span>
+    </button>
+    <button class="hamburger" id="hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
+  </div>
+</header><aside class="cart-sidebar" id="cartSidebar">
+  <div class="cart-header"><h2>Your Bag</h2><button class="cart-close" id="cartClose">✕</button></div>
+  <div class="cart-items" id="cartItems"><p class="cart-empty">Your cart is empty.</p></div>
+  <div class="cart-footer">
+    <div class="cart-total"><span>Total</span><span id="cartTotal">PKR 0</span></div>
+    <a href="cart.html" class="btn-primary" style="width:100%;justify-content:center;">Checkout</a>
+  </div>
+</aside>
+<div class="cart-overlay" id="cartOverlay"></div>
+<main>
+<section class="hero hero--sm" aria-label="Abayas Hero">
+  <div class="hero__bg"></div>
+  <div class="hero__shimmer"></div>
+  <div class="hero__content">
+    <p class="hero__eyebrow">DESIGNED ELEGANCE</p>
+    <h1 class="hero__title">The Drape <em>Collection</em></h1>
+    <p class="hero__sub">Grace in every thread.</p>
+  </div>
+</section>
+
+<section class="products-section">
+  <div class="products-header reveal">
+    <div>
+      <p class="section-label">Abaya Collection</p>
+      <h2 class="section-title">Curated <em>Pieces</em></h2>
+    </div>
+    <a href="shop.html" class="btn-ghost">← All Products</a>
+  </div>
+  <div class="product-grid">
+    <div class="product-card reveal" data-id="p7" data-category="Abayas" data-name="Floral Print Scarf – Dusk Rose" data-price="3500" data-href="product-p7.html">
+  <div class="product-card__img">
+    <div class="product-card__ph">Abayas</div>
+    <a href="product-p7.html" class="product-card__overlay" tabindex="-1" aria-hidden="true"><span class="product-card__view-label">View</span></a>
+    
+    <button class="product-card__wish" aria-label="Wishlist">♡</button>
+  </div>
+  <div class="product-card__info">
+    <p class="product-card__cat">Abayas</p>
+    <p class="product-card__name">Floral Print Scarf – Dusk Rose</p>
+    <p class="product-card__desc">Hand-illustrated floral motif printed on fine silk-touch fabric. A statement piece in soft rose tones.</p>
+    <p class="product-card__stock in-stock">In Stock</p>
+<div class="product-card__footer">
+      <span class="product-card__price">PKR 3,500</span>
+      <button class="btn-add">Add to Bag</button>
+    </div>
+  </div>
+</div>
+<div class="product-card reveal" data-id="p8" data-category="Abayas" data-name="Geometric Print Hijab – Slate" data-price="3200" data-href="product-p8.html">
+  <div class="product-card__img">
+    <div class="product-card__ph">Abayas</div>
+    <a href="product-p8.html" class="product-card__overlay" tabindex="-1" aria-hidden="true"><span class="product-card__view-label">View</span></a>
+    
+    <button class="product-card__wish" aria-label="Wishlist">♡</button>
+  </div>
+  <div class="product-card__info">
+    <p class="product-card__cat">Abayas</p>
+    <p class="product-card__name">Geometric Print Hijab – Slate</p>
+    <p class="product-card__desc">Bold geometric pattern in muted slate and cream. Pairs beautifully with neutral abayas.</p>
+    <p class="product-card__stock in-stock">In Stock</p>
+<div class="product-card__footer">
+      <span class="product-card__price">PKR 3,200</span>
+      <button class="btn-add">Add to Bag</button>
+    </div>
+  </div>
+</div>
+<div class="product-card reveal" data-id="p9" data-category="Abayas" data-name="Abstract Ink Dupatta – Charcoal" data-price="4100" data-href="product-p9.html">
+  <div class="product-card__img">
+    <div class="product-card__ph">Abayas</div>
+    <a href="product-p9.html" class="product-card__overlay" tabindex="-1" aria-hidden="true"><span class="product-card__view-label">View</span></a>
+    <span class="product-card__badge">Limited</span>
+    <button class="product-card__wish" aria-label="Wishlist">♡</button>
+  </div>
+  <div class="product-card__info">
+    <p class="product-card__cat">Abayas</p>
+    <p class="product-card__name">Abstract Ink Dupatta – Charcoal</p>
+    <p class="product-card__desc">Artist-designed abstract print on fluid dupatta fabric. Limited run, one-of-a-kind feel.</p>
+    <p class="product-card__stock in-stock">In Stock</p>
+<div class="product-card__footer">
+      <span class="product-card__price">PKR 4,100</span>
+      <button class="btn-add">Add to Bag</button>
+    </div>
+  </div>
+</div>
+  </div>
+</section>
+
+<div class="callout">
+  <div class="callout__inner">
+    <p class="section-label">The Process</p>
+    <h2 class="section-title reveal">How Our Silhouettes<em>Come to Life</em></h2>
+    <p class="reveal reveal-delay-1">Every abaya in our collection begins with a study of form and movement. Our in-house design team meticulously drafts each pattern—focusing on fluid drapes, clean structures, and timeless cuts—before selecting premium, high-grade fabrics that breathe and move effortlessly.</p>
+    <p class="reveal reveal-delay-2">We prioritize meticulous tailoring and premium finishing techniques, ensuring every seam is pristine and every hem falls perfectly. No rushed production, no compromises. Each finished garment is a testament to understated elegance and masterful craftsmanship.</p>
+    <p class="reveal reveal-delay-3">Our pieces are released in small, limited quantities—once a particular design or fabric run sells out, it is rarely restocked. This keeps your wardrobe feeling rare, intentional, and uniquely yours.</p>
+  </div>
+</div>
+
+<div class="subcollection-row" style="padding-bottom:48px;">
+  <a href="shop.html" class="btn-ghost">← Back to All Products</a>
+  <a href="shop-gowns.html" class="btn-ghost">Shop Gowns →</a>
+</div>
+</main><footer class="footer">
+  <div class="footer__grid">
+    <div>
+      <p class="footer__brand">Sarah Najam Studio</p>
+      <p class="footer__tagline">Modest fashion for the modern Muslim woman. Based in Karachi.</p>
+      <div class="footer__socials">
+        <a href="https://www.instagram.com/sarahnajam_studio/" target="_blank" rel="noopener">Instagram</a>
+      </div>
+    </div>
+    <div>
+      <p class="footer__col-title">Quick Links</p>
+      <ul class="footer__links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="footer__col-title">Collections</p>
+      <ul class="footer__links">
+        <li><a href="shop-gowns.html">Gowns</a></li>
+        <li><a href="shop-dresses.html">Dresses</a></li>
+        <li><a href="shop-abayas.html">Abayas</a></li>
+        <li><a href="shop.html">New Arrivals</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="footer__col-title">Policies</p>
+      <ul class="footer__links">
+        <li><a href="policy-refund.html">Refund Policy</a></li>
+        <li><a href="policy-exchange.html">Exchange Policy</a></li>
+        <li><a href="policy-shipping.html">Shipping &amp; Delivery</a></li>
+      </ul>
+    </div>
+  </div>
+  
+  <div class="footer__bottom">
+    <small>© <span class="footer-year">2026</span> Sarah Najam Studio. All rights reserved.</small>
+    <small>Karachi, Pakistan</small>
+  </div>
+</footer><button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
+<script>
+(function() {
+  const SUPABASE_URL = 'https://ixmdcwcswmwcwjrtyuoy.supabase.co'
+  const SUPABASE_KEY = 'sb_publishable_J4xkUnkTBUinqXdXIH2IGg_8mhAM5O3'
+
+  async function loadProducts() {
+    const res = await fetch(
+      `${SUPABASE_URL}/rest/v1/products?category=eq.Abayas&select=*&order=id.asc`,
+      { headers: { apikey: SUPABASE_KEY, Authorization: `Bearer ${SUPABASE_KEY}` } }
+    )
+    const products = await res.json()
+
+    const grid = document.querySelector('.product-grid')
+    grid.innerHTML = products.map(p => `
+      <div class="product-card" data-id="${p.id}" data-category="Abayas" data-name="${p.name}" data-price="${p.price}" data-image="${p.image_url || ''}" data-href="product-p10.html?slug=${p.slug}">
+        <div class="product-card__img">
+          ${p.image_url
+            ? `<img src="${p.image_url}" alt="${p.name}" style="width:100%;height:100%;object-fit:cover;" />`
+            : `<div class="product-card__ph">Abayas</div>`}
+          <a href="product-p10.html?slug=${p.slug}" class="product-card__overlay" tabindex="-1" aria-hidden="true">
+            <span class="product-card__view-label">View</span>
+          </a>
+          <button class="product-card__wish" aria-label="Wishlist">♡</button>
+        </div>
+        <div class="product-card__info">
+          <p class="product-card__cat">Abayas</p>
+          <p class="product-card__name">${p.name}</p>
+          <p class="product-card__desc">${p.description}</p>
+          <p class="product-card__stock ${p.inventory > 0 ? 'in-stock' : 'out-of-stock'}">
+            ${p.inventory > 0 ? 'In Stock' : 'Out of Stock'}
+          </p>
+          <div class="product-card__footer">
+            <span class="product-card__price">PKR ${p.price.toLocaleString()}</span>
+            ${p.inventory > 0 
+              ? `<button class="btn-add"
+                  data-id="${p.id}"
+                  data-name="${p.name}"
+                  data-price="${p.price}"
+                  data-image="${p.image_url || ''}"
+                  data-instock="true">Add to Cart</button>`
+              : `<a href="product-p10.html?slug=${p.slug}" class="btn-add" style="text-align: center; text-decoration: none;">Read More</a>`
+            }
+          </div>
+        </div>
+      </div>
+    `).join('')
+
+    grid.querySelectorAll('.product-card').forEach(c => c.classList.add('visible'))
+  }
+
+  loadProducts()
+})();
+</script>
+<script src="script.js"></script>
+
+</body>
+</html>
+
