@@ -349,6 +349,8 @@ refreshCartUI();
     try {
       const orderID = Date.now().toString().slice(-4);
 
+console.log("Sending order email to:", email); 
+
       // Send professional order email
 await fetch("/api/send-email", {
   method: "POST",
