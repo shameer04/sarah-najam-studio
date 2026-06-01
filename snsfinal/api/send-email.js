@@ -24,6 +24,29 @@ export default async function handler(req, res) {
 
     // --- ORDER CONFIRMATIONS ---
     if (type === "order") {
+
+            // 2. Send to CUSTOMER
+      await resend.emails.send({
+        from: "sarah najam studio <onboarding@resend.dev>",
+        to: [email],
+        subject: `Order Confirmed: #${orderID}`,
+        html: `
+          <div style="font-family: sans-serif; max-width: 600px; margin: auto; border: 1px solid #eee; padding: 20px;">
+            <h2 style="text-align: center;">Thank You for Your Order!</h2>
+            <p>Hi ${name.split(' ')[0]}, your order <strong>#${orderID}</strong> is confirmed and will be processed shortly.</p>
+            <div style="background: #f9f9f9; padding: 15px; border-radius: 5px;">
+              <p><strong>Order Number:</strong> #${orderID}</p>
+              <p><strong>Payment Method:</strong> ${payment}</p>
+            </div>
+            <h3 style="margin-top: 20px;">Order Summary</h3>
+            ${items}
+            <h3 style="margin-top: 20px;">Total Amount: Rs ${total}</h3>
+            <p>If you have any questions, just reply to this email!</p>
+          </div>
+        `
+      });
+    }
+    
       // 1. Send to YOU (Admin)
       await resend.emails.send({
         from: "sarah najam studio Orders <onboarding@resend.dev>",
@@ -46,27 +69,6 @@ export default async function handler(req, res) {
         `
       });
 
-      // 2. Send to CUSTOMER
-      await resend.emails.send({
-        from: "sarah najam studio <onboarding@resend.dev>",
-        to: [email],
-        subject: `Order Confirmed: #${orderID}`,
-        html: `
-          <div style="font-family: sans-serif; max-width: 600px; margin: auto; border: 1px solid #eee; padding: 20px;">
-            <h2 style="text-align: center;">Thank You for Your Order!</h2>
-            <p>Hi ${name.split(' ')[0]}, your order <strong>#${orderID}</strong> is confirmed and will be processed shortly.</p>
-            <div style="background: #f9f9f9; padding: 15px; border-radius: 5px;">
-              <p><strong>Order Number:</strong> #${orderID}</p>
-              <p><strong>Payment Method:</strong> ${payment}</p>
-            </div>
-            <h3 style="margin-top: 20px;">Order Summary</h3>
-            ${items}
-            <h3 style="margin-top: 20px;">Total Amount: Rs ${total}</h3>
-            <p>If you have any questions, just reply to this email!</p>
-          </div>
-        `
-      });
-    }
 
     return res.status(200).json({ success: true });
 
