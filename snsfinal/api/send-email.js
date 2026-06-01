@@ -1,5 +1,4 @@
 import { Resend } from "resend";
-
 const resend = new Resend(process.env.RESEND_API_KEY);
 
 export default async function handler(req, res) {
@@ -8,11 +7,9 @@ export default async function handler(req, res) {
   }
 
   try {
-    // We pull all these from the 'body' of your fetch request in script.js
     const { type, name, email, message, items, total, orderID, address, city, phone, payment } = req.body;
     console.log("BODY received:", { type, email, name });
 
-    // --- CONTACT FORM ---
     if (type === "contact") {
       await resend.emails.send({
         from: "sarah najam studio <onboarding@resend.dev>",
@@ -22,10 +19,7 @@ export default async function handler(req, res) {
       });
     }
 
-    // --- ORDER CONFIRMATIONS ---
     if (type === "order") {
-
-            // 2. Send to CUSTOMER
       await resend.emails.send({
         from: "sarah najam studio <onboarding@resend.dev>",
         to: [email],
@@ -45,9 +39,7 @@ export default async function handler(req, res) {
           </div>
         `
       });
-    }
-    
-      // 1. Send to YOU (Admin)
+
       await resend.emails.send({
         from: "sarah najam studio Orders <onboarding@resend.dev>",
         to: ["shopsarahnajamstudio@outlook.com"],
@@ -68,7 +60,7 @@ export default async function handler(req, res) {
           <p><strong>Payment:</strong> ${payment}</p>
         `
       });
-
+    }
 
     return res.status(200).json({ success: true });
 
