@@ -917,7 +917,7 @@ section { padding: 100px 48px; }
   .navbar__logo { position: static; transform: none; font-size: 1.1rem; letter-spacing: 0.02em; }
   .navbar__links { display: none; }
   .hamburger { display: flex; }
-  .hero { min-height: 100svh; align-items: flex-end; padding-bottom: 60px; }
+  .hero { min-height: 100svh; }
   .hero__content { padding: 0 24px; align-items: center; text-align: center; }
   .hero__scroll { display: none; }
   .product-grid { grid-template-columns: repeat(2,1fr); }
