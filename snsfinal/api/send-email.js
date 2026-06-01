@@ -10,7 +10,7 @@ export default async function handler(req, res) {
   try {
     // We pull all these from the 'body' of your fetch request in script.js
     const { type, name, email, message, items, total, orderID, address, city, phone, payment } = req.body;
-    console.log("DEBUG - type:", type, "email:", email);
+    console.log("BODY received:", { type, email, name });
 
     // --- CONTACT FORM ---
     if (type === "contact") {
