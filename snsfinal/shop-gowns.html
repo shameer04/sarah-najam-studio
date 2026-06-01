@@ -203,6 +203,11 @@
     const products = await res.json()
 
     const grid = document.querySelector('.product-grid')
+
+     if (!products.length) {
+      grid.innerHTML = '<p style="grid-column:1/-1;text-align:center;color:var(--mid-gray);font-style:italic;padding:40px 0;">No Dresses available yet. Check back soon!</p>'
+      return
+    }
     grid.innerHTML = products.map(p => `
     
     
