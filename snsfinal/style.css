@@ -82,7 +82,9 @@ ul { list-style: none; }
   padding: 22px 48px;
   display: flex; align-items: center; justify-content: space-between;
   transition: padding 0.4s var(--ease), background 0.4s, box-shadow 0.4s;
-  background: transparent;
+  background: rgba(250,247,244,0.97);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 1px 0 rgba(44,36,32,0.08);
 }
 .navbar.scrolled {
   padding: 13px 48px;
@@ -96,7 +98,7 @@ ul { list-style: none; }
   font-weight: 500;
   text-transform: lowercase;
   letter-spacing: 0.03em;
-  color: var(--cream);
+  color: var(--dark);
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
@@ -109,7 +111,7 @@ ul { list-style: none; }
 .nav-link {
   font-family: var(--font-sans);
   font-size: 0.72rem; letter-spacing: 0.18em; text-transform: uppercase;
-  color: var(--cream);
+  color: var(--dark);
   position: relative; padding-bottom: 2px;
   transition: color 0.4s;
 }
