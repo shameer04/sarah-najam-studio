@@ -897,7 +897,7 @@ section { padding: 100px 48px; }
   section { padding: 80px 32px; }
   .navbar { padding: 18px 32px; }
   .navbar.scrolled { padding: 12px 32px; }
-  .hero__eyebrow { position: absolute; top: 15%; left: 50%; transform: translateX(-50%); white-space: nowrap; color: var(--dark); z-index: 3; }
+  .hero__eyebrow { position: absolute; top: 80px; left: 50%; transform: translateX(-50%); white-space: nowrap; color: var(--dark); }
   .hero { position: relative; }
   .hero__content { padding: 0 32px; }
   .hero__scroll { right: 32px; }
