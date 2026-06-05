@@ -12,7 +12,7 @@ export default async function handler(req, res) {
 
     if (type === "contact") {
       await resend.emails.send({
-        from: "sarah najam studio <onboarding@resend.dev>",
+        from: "sarah najam studio <orders@sarahnajamstudio.com>",
         to: ["shopsarahnajamstudio@outlook.com"],
         subject: "New Contact Message",
         html: `<h2>New Message</h2><p><strong>From:</strong> ${name}</p><p><strong>Email:</strong> ${email}</p><p>${message}</p>`
@@ -21,7 +21,7 @@ export default async function handler(req, res) {
 
     if (type === "order") {
       await resend.emails.send({
-        from: "sarah najam studio <onboarding@resend.dev>",
+        from: "sarah najam studio <orders@sarahnajamstudio.com>",
         to: [email],
         subject: `Order Confirmed: #${orderID}`,
         html: `
@@ -41,7 +41,7 @@ export default async function handler(req, res) {
       });
 
       await resend.emails.send({
-        from: "sarah najam studio Orders <onboarding@resend.dev>",
+        from: "sarah najam studio Orders <orders@sarahnajamstudio.com>",
         to: ["shopsarahnajamstudio@outlook.com"],
         subject: `New Order #${orderID}`,
         html: `
