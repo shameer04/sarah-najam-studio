@@ -2,13 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://sarahnajamstudio.com/</loc></url>
   <url><loc>https://sarahnajamstudio.com/shop.html</loc></url>
-  <url><loc>https://sarahnajamstudio.com/abayas.html</loc></url>
-  <url><loc>https://sarahnajamstudio.com/gowns.html</loc></url>
-  <url><loc>https://sarahnajamstudio.com/dresses.html</loc></url>
+  <url><loc>https://sarahnajamstudio.com/shop-abayas.html</loc></url>
+  <url><loc>https://sarahnajamstudio.com/shop-gowns.html</loc></url>
+  <url><loc>https://sarahnajamstudio.com/shop-dresses.html</loc></url>
   <url><loc>https://sarahnajamstudio.com/about.html</loc></url>
   <url><loc>https://sarahnajamstudio.com/contact.html</loc></url>
   <url><loc>https://sarahnajamstudio.com/cart.html</loc></url>
+  <url><loc>https://sarahnajamstudio.com/checkout.html</loc></url>
+  <url><loc>https://sarahnajamstudio.com/product-p10.html</loc></url>
+  <url><loc>https://sarahnajamstudio.com/policy-exchange.html</loc></url>
   <url><loc>https://sarahnajamstudio.com/policy-refund.html</loc></url>
   <url><loc>https://sarahnajamstudio.com/policy-shipping.html</loc></url>
-  <url><loc>https://sarahnajamstudio.com/policy-exchange.html</loc></url>
 </urlset>
