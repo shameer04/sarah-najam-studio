@@ -330,9 +330,10 @@ refreshCartUI();
 
     const subtotal = cart.reduce((s, i) => s + i.price * i.qty, 0);
     const grandTotal = subtotal + SHIPPING;
+    const baseUrl = 'https://sarahnajamstudio.com';
     const itemsHTML = cart.map(i => `
   <div style="display:flex; align-items:center; margin-bottom:12px;">
-    <img src="${i.image}" style="width:60px; height:60px; object-fit:cover; border-radius:6px; margin-right:10px;" />
+    <img src="${i.image.startsWith('http') ? i.image : baseUrl + '/' + i.image}" style="width:60px; height:60px; object-fit:cover; border-radius:6px; margin-right:10px;" />
     <div>
       <p style="margin:0;"><strong>${i.name}</strong></p>
       <p style="margin:0; font-size:12px;">Qty: ${i.qty}</p>
